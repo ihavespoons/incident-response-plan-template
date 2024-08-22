@@ -4,18 +4,18 @@
     * The incident commander.
     * Service owners involved in the incident.
     * Key engineer(s)/responders involved in the incident.
-1. Designate an AAR owner who will investigate the incident in advance of the meeting to prepare, looking into the incident process itself including reviewing notes and reports.
+2. Designate an AAR owner who will investigate the incident in advance of the meeting to prepare, looking into the incident process itself including reviewing notes and reports.
 
 ## Conduct the AAR Meeting
 
 Document answers to the following key questions:
 
 1. **What happened?** Create a timeline, supported with data or other artifacts. **Avoid blame. Find facts.**
-1. **What was supposed to happen?**
+2. **What was supposed to happen?**
     * Detail deviations from process, procedure, or best practice, including SME assessments.
     * Identify ways the incident could have been detected sooner, or responded to more effectively
-1. **What were the root causes?** Find root cause to things that happened and to things that should have happened.
-1. **How can we improve?** Capture action items _with assignees and due dates_.  Consider:
+3. **What were the root causes?** Find root cause to things that happened and to things that should have happened.
+4. **How can we improve?** Capture action items _with assignees and due dates_.  Consider:
     * Stop: what should we stop doing?
     * Start: what should we start doing?
     * Continue: what should we keep doing?

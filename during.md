@@ -4,22 +4,20 @@ Author: {{AUTHOR_NAME}}, {{AUTHOR_EMAIL}}
 
 Revision {{REVISION_NUMBER}}, Released {{RELEASE_DATE}}
 
-This incident response plan is based on the concise, directive, specific, flexible, and free plan available on Counteractive Security's [Github](https://github.com/counteractive/incident-response-plan-template) and discussed at [www.counteractive.net](https://www.counteractive.net/posts/an-ir-plan-you-will-use/)
-
 It was last reviewed on {{REVIEW_DATE}}. It was last tested on {{TEST_DATE}}.
 
-`TODO: Customize this plan template for your organization using instructions at https://github.com/counteractive/incident-response-plan-template.  For incident response services, or help customizing, implementing, or testing your plan, contact us at contact@counteractive.net or at (888) 925-5765.`
+`TODO: Customize this plan template for your organization using instructions at https://github.com/ihavespoons/incident-response-plan-template/.`
 
 # Assess
 
 1. **Stay calm and professional.**
-1. Gather pertinent information, _e.g._, alarms, events, data, assumptions, intuitions (**observe**).
-1. Consider impact categories, below (**orient**), and determine if there is a possible incident (**decide**):
-1. Initiate a response if there is an incident (**act**).  If in doubt, initiate a response. The incident commander and response team can adjust upon investigation and review.
+2. Gather pertinent information, _e.g._, alarms, events, data, assumptions, intuitions (**observe**).
+3. Consider impact categories, below (**orient**), and determine if there is a possible incident (**decide**):
+4. Initiate a response if there is an incident (**act**).  If in doubt, initiate a response. The incident commander and response team can adjust upon investigation and review.
 
 ## Assess Functional Impact
 
-What is the direct or likely impact on your mission? (_e.g._, business operations, employees, customers, users)
+What is the direct or likely impact on your company's mission? (_e.g._, business operations, employees, customers, users)
 
 * Mission/business degradation or failure: **incident!**
 * None: assess information impact.
@@ -44,17 +42,17 @@ Create an [simple two-word phrase](http://creativityforyou.com/combomaker.html) 
 ## Assemble the Response Team
 
 1. Page the on-duty/on-call Incident Commander. `TODO: Add Incident Commander call list or procedure`
-1. **Do not** discuss the incident outside the response team unless cleared by the Incident Commander
-1. Launch and/or join the response chat at {{RESPONSE_CHAT}}.  `TODO: Add response chat launch procedure.`
-1. Launch and/or join the response call at {{RESPONSE_PHONE}} and/or {{RESPONSE_VTC}}.  `TODO: Add response call launch procedure.`
-1. Prefer voice call, chat, and secure file exchange over any other methods.
-1. **Do not** use primary email if possible.  If email is necessary, use sparingly or use {{ALTERNATE_EMAIL}}.  Encrypt emails when any participant is outside the {{ORGANIZATION_DOMAIN}} domain.  `TODO: Add alternative email details and procedure, e.g., on-demand Office 365 or GSuite`
-1. **Do not** use SMS/text to communicate about the incident, unless to tell someone to move to a more secure channel.
-1. Invite on-duty/on-call responders to the response call and response chat.
+2. **Do not** discuss the incident outside the response team unless cleared by the Incident Commander
+3. Launch and/or join the response chat at {{RESPONSE_CHAT}}.  `TODO: Add response chat launch procedure.`
+4. Launch and/or join the response call at {{RESPONSE_PHONE}} and/or {{RESPONSE_VTC}}.  `TODO: Add response call launch procedure.`
+5. Prefer voice call, chat, and secure file exchange over any other methods.
+6. **Do not** use primary email if possible.  If email is necessary, use sparingly or use {{ALTERNATE_EMAIL}}.  Encrypt emails when any participant is outside the {{ORGANIZATION_DOMAIN}} domain.  `TODO: Add alternative email details and procedure, e.g., on-demand Office 365 or GSuite`
+7. **Do not** use SMS/text to communicate about the incident, unless to tell someone to move to a more secure channel.
+8. Invite on-duty/on-call responders to the response call and response chat.
     * Invite the security team.  `TODO: Add security team contact list or procedure.`
     * Invite a SME for affected teams and systems.  `TODO: Add team SME contact list or procedure.`
     * Invite executive stakeholders and legal counsel at earliest opportunity, but prioritize operational responders.  `TODO: Add executive stakeholder contact list or procedure.`
-1. _OPTIONAL:_ Establish an in-person collaboration room ("war room") for complex or severe incidents. `TODO: Add collaboration room procedure.`
+9. _OPTIONAL:_ Establish an in-person collaboration room ("war room") for complex or severe incidents. `TODO: Add collaboration room procedure.`
 
 ### Reference: Response Team Structure
 
@@ -90,11 +88,11 @@ Executive roster             | {{EXECUTIVE_ROSTER}}
 ### Conduct Initial Response Call
 
 1. Conduct initial call using the [initial response call structure](#reference-initial-response-call-structure)
-1. Follow instructions from the Incident Commander.  If the on-duty/on-call Incident Commander does not join the call **within {{INCIDENT_COMMANDER_RESPONSE_SLA}}** and you are a trained incident commander, take command of the call.
-1. Follow the [instructions for your role](#roles).
-1. Follow the call and chat, and comment as appropriate.  If you are not a SME, filter input through the SME for your team if possible.
-1. **Keep the call and chat active throughout the incident for event-driven communication.**
-1. Schedule updates **every {{UPDATE_FREQUENCY}}** on the active bridge.
+2. Follow instructions from the Incident Commander.  If the on-duty/on-call Incident Commander does not join the call **within {{INCIDENT_COMMANDER_RESPONSE_SLA}}** and you are a trained incident commander, take command of the call.
+3. Follow the [instructions for your role](#roles).
+4. Follow the call and chat, and comment as appropriate.  If you are not a SME, filter input through the SME for your team if possible.
+5. **Keep the call and chat active throughout the incident for event-driven communication.**
+6. Schedule updates **every {{UPDATE_FREQUENCY}}** on the active bridge.
 
 #### Reference: Initial Response Call Structure
 
@@ -185,12 +183,12 @@ If an incident turns out to be two or more distinct incidents:
     * Obtain physical storage.
     * Share the incident file location on the call and chat.
     * `TODO: Customize and automate file location and procedure`
-1. Document the functional and information impact, if known (see [Assess](#assess)). `TODO: Customize impact categories, if necessary.`
-1. Document the vector, if known (_e.g.,_ web, email, removable media). `TODO: Customize vector list, if necessary.`
-1. Document the incident summary: a brief overview of the vector, impact, investigation, and remediation situation, if known.
-1. Document the incident timeline, including attacker activity and responder activity. `TODO: Add timelines of varying details, as necessary.`
-1. Document investigation, remediation, and communication steps.  Document activities independently so they can be combined and reused, if possible.
-1. Track significant information such as:
+2. Document the functional and information impact, if known (see [Assess](#assess)). `TODO: Customize impact categories, if necessary.`
+3. Document the vector, if known (_e.g.,_ web, email, removable media). `TODO: Customize vector list, if necessary.`
+4. Document the incident summary: a brief overview of the vector, impact, investigation, and remediation situation, if known.
+5. Document the incident timeline, including attacker activity and responder activity. `TODO: Add timelines of varying details, as necessary.`
+6. Document investigation, remediation, and communication steps.  Document activities independently so they can be combined and reused, if possible.
+7. Track significant information such as:
     * **Evidence**, with time of collection, source, chain of custody, _etc._
     * **Affected systems**, with how and when system was identified, and summary of effect (_e.g._, has malware, data accessed).
     * **Files of interest**, such as malware or data files, with system and metadata.
@@ -205,10 +203,10 @@ If an incident turns out to be two or more distinct incidents:
 ## Collect Initial Leads
 
 1. Interview incident reporter(s).
-1. Collect initial supporting data (_e.g._, alarms, events, data, assumptions, intuitions) in the incident file.
-1. Interview SME(s) with domain or system expertise, to understand technical detail, context, and risk.
-1. Interview SME(s) in affected business unit, to understand mission/business impact, context, and risk.
-1. Ensure leads are relevant, detailed, and actionable.
+2. Collect initial supporting data (_e.g._, alarms, events, data, assumptions, intuitions) in the incident file.
+3. Interview SME(s) with domain or system expertise, to understand technical detail, context, and risk.
+4. Interview SME(s) in affected business unit, to understand mission/business impact, context, and risk.
+5. Ensure leads are relevant, detailed, and actionable.
 
 ### Reference: Response Resource List
 
@@ -228,11 +226,11 @@ Log aggregator            | {{LOG_AGGREGATOR_CONSOLE}}
 ## Update Investigative Plan and Incident File
 
 1. Review and refine incident impact.
-1. Review and refine incident vector.
-1. Review and refine incident summary.
-1. Review and refine incident timeline with facts and inferences.
-1. Create hypotheses: what may have happened, and with what confidence.
-1. **Identify and prioritize key questions** (information gaps) to support or discredit hypotheses.
+2. Review and refine incident vector.
+3. Review and refine incident summary.
+4. Review and refine incident timeline with facts and inferences.
+5. Create hypotheses: what may have happened, and with what confidence.
+6. **Identify and prioritize key questions** (information gaps) to support or discredit hypotheses.
     * Use the MITRE ATT&CK matrix or similar framework to [develop questions](#reference-attacker-tactics-to-key-questions-matrix).
         * [ATT&CK for Enterprise](https://attack.mitre.org/wiki/Main_Page), including links to Windows, Mac, and Linux specifics.
         * [ATT&CK Mobile Profile](https://attack.mitre.org/mobile/index.php/Main_Page) for mobile devices.
@@ -243,10 +241,10 @@ Log aggregator            | {{LOG_AGGREGATOR_CONSOLE}}
         * **How?**: compromise (exploit), persistence, access, exfiltration, lateral movement, _etc._
         * **Why?**: targeted, timing, access x data, access y system, _etc._
         * **Who?**: attacker, affected users, affected customers, _etc._
-1. **Identify and prioritize witness devices and strategies** to answer key questions.
+7. **Identify and prioritize witness devices and strategies** to answer key questions.
     * Consult network diagrams, asset management systems, and SME expertise
     * Check the [Response Resource List](#reference-response-resource-list))
-1. Refer to [incident playbooks](#playbooks) for key questions, witness devices, and strategies for investigating common or highly damaging threats.
+8. Refer to [incident playbooks](#playbooks) for key questions, witness devices, and strategies for investigating common or highly damaging threats.
 
 **The investigative plan is critical to an effective response; it drives all investigative actions.  Use critical thinking, creativity, and sound judgment.**
 
@@ -289,8 +287,8 @@ See the [MITRE ATT&CK page](https://attack.mitre.org/) for more insight and idea
 ## Identify Systems of Interest
 
 1. Validate whether they are relevant.
-1. Categorize the reason(s) they are "of interest": has malware, accessed by compromised account, has sensitive data, etc.  Treat these as "tags", there may be more than one category per system.
-1. Prioritize collection, analysis, and remediation based on investigative needs, business impact, _etc._
+2. Categorize the reason(s) they are "of interest": has malware, accessed by compromised account, has sensitive data, etc.  Treat these as "tags", there may be more than one category per system.
+3. Prioritize collection, analysis, and remediation based on investigative needs, business impact, _etc._
 
 ## Collect Evidence
 
@@ -364,12 +362,12 @@ Consider collecting the following artifacts as evidence, either in real time (_e
 ## Update Remediation Plan
 
 1. Review the incident file at {{INCIDENT_FILE_LOCATION}} using the [incident name](#name-the-incident)
-1. Review applicable [playbooks](#playbooks).
-1. Review the [Response Resource List](#reference-response-resource-list)).
-1. Consider which attacker tactics are in play in this incident.  Use the MITRE [ATT&CK](https://attack.mitre.org/wiki/Main_Page) list (_i.e._, Persistence, Privilege Escalation, Defense Evasion, Credential Access, Discovery, Lateral Movement, Execution, Collection, Exfiltration, and Command and Control), or similar framework.
-1. Develop remediations for each tactic in play, as feasible given existing tools and resources.  Consider remediations to [Protect](#protect), [Detect](#detect), [Contain](#contain), and [Eradicate](#eradicate) each attacker behavior.
-1. Prioritize based on [timing strategy](#choose-remediation-timing), impact, and urgency.
-1. Document in incident file.
+2. Review applicable [playbooks](#playbooks).
+3. Review the [Response Resource List](#reference-response-resource-list)).
+4. Consider which attacker tactics are in play in this incident.  Use the MITRE [ATT&CK](https://attack.mitre.org/wiki/Main_Page) list (_i.e._, Persistence, Privilege Escalation, Defense Evasion, Credential Access, Discovery, Lateral Movement, Execution, Collection, Exfiltration, and Command and Control), or similar framework.
+5. Develop remediations for each tactic in play, as feasible given existing tools and resources.  Consider remediations to [Protect](#protect), [Detect](#detect), [Contain](#contain), and [Eradicate](#eradicate) each attacker behavior.
+6. Prioritize based on [timing strategy](#choose-remediation-timing), impact, and urgency.
+7. Document in incident file.
 
 Use [information security (infosec) frameworks](https://www.nist.gov/cyberframework) as inspiration, but **do not use incident remediation as a substitute for an infosec program with an appropriate framework.**  Use them to supplement one another.
 
@@ -534,5 +532,5 @@ All communication must include the most accurate information available.  Display
 **Recovery is typically governed by business units and system owners.  Take recovery actions only in collaboration with relevant stakeholders.**
 
 1. Launch business continuity/disaster recovery plan(s): _e.g._, consider migration to alternate operating locations, fail-over sites, backup systems.
-1. Integrate security actions with organizational recovery efforts.
+2. Integrate security actions with organizational recovery efforts.
 

@@ -1,0 +1,86 @@
+version: '3'
+
+tasks:
+  build-docker:
+    run: when_changed
+    cmds:
+      - docker build -t irp-builder .
+    sources:
+      - Dockerfile
+
+  pandoc-plan:
+    cmds:
+      - mkdir -p build
+      - docker run --rm -v $(pwd):/workdir irp-builder mustache info.yml pandoc.yml > build/_pandoc.yml
+    sources:
+      - pandoc.yml
+    generates:
+      - build/_pandoc.yml
+  
+  build-md:
+    cmds:
+      - mkdir -p public
+      - cat during.md playbooks/index.md playbooks/playbook-*.md roles/index.md roles/role-*.md after.md about.md > build/_plan.md
+      - docker run --rm -v $(pwd):/workdir irp-builder mustache info.yml build/_plan.md > public/plan.md
+    sources:
+      - during.md
+      - playbooks/index.md
+      - playbooks/playbook-*.md
+      - roles/index.md
+      - roles/role-*.md
+      - after.md
+      - about.md
+      - info.yml
+      - build/_plan.md
+    generates:
+      - build/_plan.md
+      - public/plan.md
+
+  build-pdf:
+    deps: [build-docker, build-md, pandoc-plan]
+    run: when_changed
+    cmds:
+      - docker run --rm -v $(pwd):/workdir irp-builder pandoc --toc --toc-depth=3 --standalone --metadata-file=build/_pandoc.yml --output=public/plan.pdf public/plan.md
+    sources:
+      - build/_pandoc.yml
+      - public/plan.md
+    generates:
+      - public/plan.pdf
+  
+  build-docx:
+    deps: [build-docker, build-md, pandoc-plan]
+    run: when_changed
+    cmds:
+      - docker run --rm -v $(pwd):/workdir irp-builder pandoc --toc --toc-depth=3 --standalone --metadata-file=build/_pandoc.yml --output=public/plan.docx public/plan.md
+    sources:
+      - build/_pandoc.yml
+      - public/plan.md
+    generates:
+      - public/plan.docx
+
+  build-html:
+    deps: [build-docker, build-md, pandoc-plan]
+    run: when_changed
+    cmds:
+      - docker run --rm -v $(pwd):/workdir irp-builder pandoc --toc --toc-depth=3 --standalone --metadata-file=build/_pandoc.yml --output=public/plan.html public/plan.md
+    sources:
+      - build/_pandoc.yml
+      - public/plan.md
+    generates:
+      - public/plan.html
+
+  todo:
+   cmds:
+      - | 
+        grep --color --recursive \
+        --exclude='Makefile' --exclude='README.md' \
+        --exclude-dir='public' --exclude-dir='build' --exclude-dir='examples' \
+        'TODO:' .
+
+  default:
+    cmds:
+      - task pandoc-plan
+      - task build-md
+      - task build-pdf
+      - task build-docx
+      - task build-html

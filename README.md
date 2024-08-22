@@ -2,15 +2,11 @@
 
 ## About
 
-This template was developed by the team at [Counteractive Security](https://www.counteractive.net), to help all organizations get a good start on a concise, directive, specific, flexible, and free incident response plan.  Build a [plan you will actually use](https://www.counteractive.net/posts/an-ir-plan-you-will-use/) to respond effectively, minimize cost and impact, and get back to business as soon as possible.
+The original version of this template was developed by [Counteractive Security](https://www.counteractive.net). This is just me picking up where they left modernising the stack slightly and making this something that is usable currently.
 
-Download the latest release [here](https://github.com/counteractive/incident-response-plan-template/releases/latest), a please create an issue or submit a pull request with any feedback, suggestions, or updates.
+Download the latest release [here](https://github.com/ihavespoons/incident-response-plan-template/releases/latest), a please create an issue or submit a pull request with any feedback, suggestions, or updates.
 
 ## Instructions
-
-**💡 If you prefer to work in Microsoft Word (.docx format), please download the [example word version](examples/plan.docx) and customize directly using the [instructions below](#customize).** 
-
-For those working in other formats like markdown, html, or pdf, please read on.
 
 ### Download or fork this template
 
@@ -32,23 +28,14 @@ The easiest way to replace these variables is to customize the `info.yml` file w
 If you don't have the information or tools referenced in the template variables, that's definitely worth fixing.  **Especially** the critical information list (data you want to protect) and critical asset list (systems you want to protect).
 
 ### Build the template
+To get started you need to have:
+  - Docker
+  - [Task](https://taskfile.dev/)
 
-In your linux, mac, or [WSL](https://docs.microsoft.com/en-us/windows/wsl/faq) terminal:
-
-```bash
-# install core dependencies, if not already present
-sudo apt-get install make ruby-mustache pandoc
-
-# for pdf format (big)
-sudo apt-get install texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra
-
-# change to the directory of the cloned repository
-cd /path/to/incident-response-plan-template
-
-# build the template
-make
+On any system that runs docker simply run:
+```bash 
+    task 
 ```
-
 This merges the template components, combines them with your custom data from `info.yml`, and outputs all supported formats in the `public/` directory.  That's it!
 
 *If you have a specific case and want more details, read on!*
@@ -63,15 +50,11 @@ This merges the template components, combines them with your custom data from `i
 
 ### Deploy and use the plan
 
-The makefile uses [pandoc](https://pandoc.org) to create a variety of formats, or you can use the markdown files with [mkdocs](http://www.mkdocs.org/), [hugo](https://gohugo.io/), or countless other platforms.
+The Taskfile uses Docker & [pandoc](https://pandoc.org) to create a variety of formats, or you can use the markdown files with [mkdocs](http://www.mkdocs.org/), [hugo](https://gohugo.io/), or countless other platforms.
 
 ### Examples
 
 Examples in each format are available in [the examples directory](./examples).  The [markdown version](./examples/plan.md) is a good place to start, rendered from markdown to html automatically by github.
-
-### Contact Us
-
-For professional assistance with incident response, or with customizing, implementing, or testing your plan, please contact us at contact@counteractive.net or [(888) 925-5765](tel:+18889255765).
 
 ## License
 

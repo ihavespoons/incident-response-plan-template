@@ -1,14 +1,14 @@
 # About
 
-This template was developed by the team at [Counteractive Security](https://www.counteractive.net), to help all organizations get a good start on a concise, directive, specific, flexible, and free incident response plan.  Build a [plan you will actually use](https://www.counteractive.net/posts/an-ir-plan-you-will-use/) to respond effectively, minimize cost and impact, and get back to business as soon as possible.
+The original version of this template was developed by [Counteractive Security](https://www.counteractive.net). This is just me picking up where they left modernising the stack slightly and making this something that is usable currently.
 
 ## License
 
-This template is provided under the Apache License, version 2.0.  You can view the source code for this plan at https://github.com/counteractive.
+This template is provided under the Apache License, version 2.0.  You can view the source code for this plan at https://github.com/ihavespoons/incident-response-plan-template.
 
 ## Instructions
 
-Customize this plan template for your own organization.  Instructions are available in the project's [README](https://github.com/counteractive).  For professional assistance with incident response, or with customizing, implementing, or testing your plan, please contact us by [email](mailto:support@counteractive.net) or [phone](tel:+18889255765).
+Customize this plan template for your own organization.  Instructions are available in the project's [README](https://github.com/ihavespoons/incident-response-plan-template). 
 
 ## References and Additional Reading
 
